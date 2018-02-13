@@ -1,0 +1,76 @@
+\documentclass[10pt,parskip=half,chapterprefix=true]{scrbook}
+\usepackage{amsmath}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\setsansfont{TeX Gyre Heros}
+\usepackage[math-style=french]{unicode-math}
+\setmathfont{TeX Gyre Pagella Math}
+\usepackage[french]{babel}
+\usepackage{microtype}
+
+\title{Cours élémentaire de mathématiques supérieures}
+\author{Jean Quinet}
+
+\newlength{\largeurperso}
+
+\begin{document}
+
+\frontmatter
+
+\maketitle
+\tableofcontents
+
+\mainmatter
+
+\part{Algèbre}
+
+\chapter{Les ensembles}
+
+\section{Ensembles et relations}
+
+Le langage des ensembles, introduit il y a plus d'un siècle par Greg
+\textsc{Cantor}, a envahi toutes les branches des mathématiques ; il
+est employé en France à tous les niveaux de l'enseignement, y compris
+à l'école maternelle. Nous employons donc ce langage, non seulement
+parce qu'il est commode, mais aussi et surtout parce qu'il est est
+désormais impossible de l'ignorer.
+
+Les notions d'\emph{ensemble} et de \emph{relation} sont premières,
+c'est à dire qu'il n'est pas possible de les définir à partir d'autres
+notions.
+
+Intuitivement, une relation est une affirmation portant sur un
+ensemble \(E\), qui est vérifiée ou non pour un ensemble donné \(E_0\)
+; suivant le cas, on dit que \(E_0\) satisfait ou non à cette
+relation.
+
+\subsection*{Négation d'une relation}
+
+Étant donnée une relation \(R\), on définit en logique une nouvelle
+relation, appelée \emph{négation} de \(R\), et notée
+\((\text{non }R)\), ou encore \(\neg R\). La négation de la négation
+de \(R\) est la relation \(R\) elle-même.
+
+On dit encore que les relations \(R\) et \(\neg R\) sont
+contradictoires, c'est à dire que
+\begin{itemize}
+\item pour tout ensemble, l'une des deux relations est vraie,
+\item mais pour aucun ensemble, elles ne sont vraies l'une et l'autre.
+\end{itemize}
+
+\medskip Par exemple, dans l'ensemble des entiers naturels, les
+relations
+\begin{itemize}
+  \settowidth{\largeurperso}{\(\neg\)}
+\item [] \hspace{\largeurperso}\(R\) : l'entier \(x\) est pair,
+\item [] \(\neg R\) : l'entier \(x\) n'est pas pair (autrement dit,
+  est impair)
+\end{itemize}
+sont contradictoires.
+
+\subsection*{Conjonction, disjonction}
+
+On appelle \emph{conjonction} de deux relations \(R_1\) et \(R_2\), et on note (\(R_1\) et \(R_2\)), ou \(R_1\wedge R_2\), la relation vraie si et seulement si \(R_1\) et \(R_2\) le sont. On définit enfin la \emph{disjonction} des relations \(R_1\) et \(R_2\) : c'est la relation, notée (\(R_1\) ou \(R_2\)), ou \(R_1\vee R_2\), vraie si et seulement si l'une au moins des deux relations \(R_1\) et \(R_2\) est vraie.
+
+
+\end{document}
