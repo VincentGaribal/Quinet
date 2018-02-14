@@ -1,4 +1,5 @@
 \documentclass[10pt,parskip=half,chapterprefix=true]{scrbook}
+\usepackage{showframe}
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{fontspec}
@@ -23,8 +24,6 @@
 \title{Cours élémentaire de mathématiques supérieures}
 \author{Jean Quinet}
 
-\newlength{\largeurperso}
-
 \begin{document}
 
 \frontmatter
@@ -38,7 +37,7 @@
 
 \chapter{Les ensembles}
 
-\section{Ensembles et relations}
+\section{Ensembles et relations.}
 
 Le langage des ensembles, introduit il y a plus d'un siècle par Georg
 \textsc{Cantor} (1845-1918), a envahi toutes les branches des mathématiques ; il
@@ -72,12 +71,11 @@ contradictoires, c'est à dire que
 
 \medskip Par exemple, dans l'ensemble des entiers naturels, les
 relations
-\begin{itemize}
-  \settowidth{\largeurperso}{\(\neg\)}
-\item [] \hspace{\largeurperso}\(R\) : l'entier \(x\) est pair,
-\item [] \(\neg R\) : l'entier \(x\) n'est pas pair (autrement dit,
-  est impair)
-\end{itemize}
+\begin{flalign*}
+     & R\text{ : l'entier }x\text{ est pair,}\\
+\neg & R\text{ : l'entier }x\text{ n'est pas pair (autrement dit,
+  est impair)}
+\end{flalign*}
 sont contradictoires.
 
 \subsection*{Conjonction, disjonction}
@@ -104,5 +102,16 @@ On a aussi l'implication réciproque \(R_2\Rightarrow R_1\) (c'est le théorème
 Les deux relations sont donc \emph{équivalentes} :
 \[R_1\Leftrightarrow R_2.\]
 
+\section{Égalité. Appartenance.}
+
+Les relations d'égalité et d'appartenance sont encore des notions premières.
+
+L'\emph{égalité} de deux ensembles \(E\) et \(F\) se note \(E=F\) (et se lit «~\(E\) égale \(F\)~») ; elle signifie intuitivement que les lettres \(E\) et \(F\) représentent le même objet.
+
+Pour tout ensemble \(E\), \(E=E\). La relation \(E=F\) équivaut à la relation \(F=E\). Enfin, si \(E=F\) et si \(F=G\), alors \(E=G\). La négation de l'égalité de \(E\) et de \(F\) se note \(E\neq F\) (et se lit «~\(E\) n'égale pas \(F\)~», ou ~«\(E\) est différent de \(F\)~»).
+
+L'\emph{appartenance} d'un ensemble \(x\) à un ensemble \(E\) se note \(x\in E\) (et se lit «~\(x\) appartient à \(E\)~»). On dit alors que \(x\) est \emph{élément} de \(E\). La négation de l'appartenance de \(x\) à \(E\) se note \(x\notin E\) (et se lit bien entendu «~\(x\) n'appartient pas à \(E\)~»).
+
+Pour que deux ensembles \(E\) et \(F\) soient égaux, il faut et il suffit que les relations d'appartenance à \(E\) et à \(F\) soient équivalentes :
 
 \end{document}
