@@ -1,12 +1,24 @@
 \documentclass[10pt,parskip=half,chapterprefix=true]{scrbook}
 \usepackage{amsmath}
+\usepackage{amsthm}
 \usepackage{fontspec}
 \setmainfont{TeX Gyre Pagella}
-\setsansfont{TeX Gyre Heros}
+\setsansfont[BoldFont={Source Sans Pro SemiBold}]{Source Sans Pro Light}
 \usepackage[math-style=french]{unicode-math}
 \setmathfont{TeX Gyre Pagella Math}
 \usepackage[french]{babel}
 \usepackage{microtype}
+\usepackage{hyperref}
+
+\hypersetup{%
+  hidelinks=true,
+  unicode=true,
+  pdftitle={Cours élémentaire de mathématiques supérieures},
+  pdfauthor={Jean Quinet},
+  pdfcreator={Vincent Garibal},
+  pdfsubject={Mathématiques},
+  pdfkeywords={Algèbre, Analyse, Géométrie},
+}
 
 \title{Cours élémentaire de mathématiques supérieures}
 \author{Jean Quinet}
@@ -28,8 +40,8 @@
 
 \section{Ensembles et relations}
 
-Le langage des ensembles, introduit il y a plus d'un siècle par Greg
-\textsc{Cantor}, a envahi toutes les branches des mathématiques ; il
+Le langage des ensembles, introduit il y a plus d'un siècle par Georg
+\textsc{Cantor} (1845-1918), a envahi toutes les branches des mathématiques ; il
 est employé en France à tous les niveaux de l'enseignement, y compris
 à l'école maternelle. Nous employons donc ce langage, non seulement
 parce qu'il est commode, mais aussi et surtout parce qu'il est est
@@ -81,6 +93,16 @@ La relation d'implication conduit à la notion d'\emph{équivalence} de deux rel
 L'implication \(R_2\Rightarrow R_1\) est dite \emph{réciproque} de l'implication \(R_1\Rightarrow R_2\). L'implication \((\text{non}R_2)\Rightarrow(\text{non} R_1)\) est appelée \emph{contraposée} de \(R_1\Rightarrow R_2\). Une implication et sa contraposée sont toujours équivalentes.
 
 \paragraph{Exemple.} Soient les relations
+\begin{flalign*}
+  R_1& \text{ : le triangle ABC a ses trois côtés égaux,}\\
+  R_2& \text{ : le triangle ABC a ses trois angles égaux.}
+\end{flalign*}
+On a l'implication \(R_1\Rightarrow R_2\) (c'est le théorème bien connu : si un triangle a ses trois côtés égaux, il a aussi ses trois angles égaux).
+
+On a aussi l'implication réciproque \(R_2\Rightarrow R_1\) (c'est le théorème : si un triangle a ses trois angles égaux, il a aussi ses trois côtés égaux).
+
+Les deux relations sont donc \emph{équivalentes} :
+\[R_1\Leftrightarrow R_2.\]
 
 
 \end{document}
