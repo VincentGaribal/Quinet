@@ -1,5 +1,4 @@
-\documentclass[10pt,parskip=half,chapterprefix=true]{scrbook}
-\usepackage{showframe}
+\documentclass[10pt,parskip=full,chapterprefix=true,a5paper]{scrbook}
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{fontspec}
@@ -7,6 +6,7 @@
 \setsansfont[BoldFont={Source Sans Pro SemiBold}]{Source Sans Pro Light}
 \usepackage[math-style=french]{unicode-math}
 \setmathfont{TeX Gyre Pagella Math}
+\usepackage{tikz}
 \usepackage[french]{babel}
 \usepackage{microtype}
 \usepackage{hyperref}
@@ -113,5 +113,24 @@ Pour tout ensemble \(E\), \(E=E\). La relation \(E=F\) équivaut à la relation 
 L'\emph{appartenance} d'un ensemble \(x\) à un ensemble \(E\) se note \(x\in E\) (et se lit «~\(x\) appartient à \(E\)~»). On dit alors que \(x\) est \emph{élément} de \(E\). La négation de l'appartenance de \(x\) à \(E\) se note \(x\notin E\) (et se lit bien entendu «~\(x\) n'appartient pas à \(E\)~»).
 
 Pour que deux ensembles \(E\) et \(F\) soient égaux, il faut et il suffit que les relations d'appartenance à \(E\) et à \(F\) soient équivalentes :
+\[
+  x\in E \Leftrightarrow x\in F
+\]
+En particulier, l'énoncé précédent affirme l'unicité d'une ensemble n'ayant aucun élément. On admet l'existence d'un tel ensemble, appelé \emph{ensemble vide}, et noté \(\varnothing\).
+
+On dit qu'un ensemble \(E\) a un élément s'il est non vide et si la conjonction des relations \(x\in E\) et \(y\in E\) implique \(x=y\). On note un tel ensemble \(\{x\}\), et on l'appelle \emph{singleton}. On définit de même les ensembles à deux éléments, appelés \emph{paires} ; on emploie alors la notation \(\{x,y\}\).
+
+Plus généralement, on peut définir un ensemble \(E\) par la liste de ses éléments : \(E=\{x,y,z,\dots\}\) ; on dit que l'ensemble \(E\) est donné en \emph{extension}. Dans certains cas, on peut aussi définir un ensemble \(E\) par une relation caractéristique \(R\) ; l'ensemble \(E\) est alors donné en \emph{compréhension}.
+
+On représente généralement un ensemble par la partie du plan limitée par un contour fermé (Fig. \ref{fig:ensemble}).
+
+\begin{figure}[ht]
+  \centering
+  \begin{tikzpicture}
+    \draw (1,0) circle [x radius=2cm, y radius=12mm] node [pos=0] {E};
+  \end{tikzpicture}
+  \caption{\label{fig:ensemble}Ensemble.}
+\end{figure}
+
 
 \end{document}
