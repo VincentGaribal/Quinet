@@ -1,4 +1,4 @@
-\documentclass[10pt,parskip=full,chapterprefix=true,a5paper]{scrbook}
+\documentclass[12pt,parskip=full,chapterprefix=true,a5paper]{scrbook}
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{fontspec}
@@ -7,6 +7,7 @@
 \usepackage[math-style=french]{unicode-math}
 \setmathfont{TeX Gyre Pagella Math}
 \usepackage{tikz}
+\usepackage{enumitem}
 \usepackage[french]{babel}
 \usepackage{microtype}
 \usepackage{hyperref}
@@ -127,10 +128,54 @@ On représente généralement un ensemble par la partie du plan limitée par un 
 \begin{figure}[ht]
   \centering
   \begin{tikzpicture}
-    \draw (1,0) circle [x radius=2cm, y radius=12mm] node [pos=0] {E};
+    \draw (1,0) circle [x radius=2cm, y radius=12mm, rotate=30];
+    \node[fill=white] at (1.5cm,1.4cm) {E};
   \end{tikzpicture}
   \caption{\label{fig:ensemble}Ensemble.}
 \end{figure}
 
+\section{Parties d'un ensemble.}
+
+Soient \(E\) et \(F\) deux ensembles. On dit que \(E\) est inclus (ou encore contenu) dans \(F\) si tout élément de \(E\) est élément de \(F\), ce qu'on note \(E\subset F\). On dit encore que \(E\) est une partie (ou un sous-ensemble) de \(F\) (Fig. \ref{fig:inclusion}).
+
+\begin{figure}[ht]
+  \centering
+  \begin{tikzpicture}
+    \draw (0,0) circle [x radius=2cm, y radius=1.5cm, rotate=-20];
+    \node[fill=white] at (1,1.1) {F};
+    \draw (0.5,-0.3) circle [x radius=1cm, y radius=0.7cm, rotate=10];
+    \node[fill=white] at (-0.2,0) {E};
+  \end{tikzpicture}
+  \caption{\label{fig:inclusion}Inclusion.}
+\end{figure}
+
+\paragraph{Exemples}
+\begin{enumerate}
+\item L'ensemble vide est inclus dans tout ensemble.
+\item L'ensemble des nombres entiers pairs est une partie de l'ensemble des nombres entiers naturels.
+\end{enumerate}
+
+La relation d'inclusion possède évidemment les propriétés suivantes :
+\begin{enumerate}[label=\alph*)]
+\item Tout ensemble est contenu dans lui-même.
+\item Si un ensemble \(E\) est inclus dans un ensemble \(F\), et si \(F\) est inclus dans \(E\), alors \(E\) est égal à \(F\).
+\item Soient \(E\), \(F\) et \(G\) trois ensembles. Si \(E\subset F\) et si \(F\subset G\), alors \(E\subset G\).
+\end{enumerate}
+
+Les parties d'un ensemble \(E\) constituent un ensemble, appelé naturellement \emph{ensemble des parties de \(E\)}, et noté \(\mathcal{P}(E)\).
+
+\paragraph{Exemples}
+\begin{enumerate}
+\item Pour tout ensemble \(E\), la partie vide de \(E\); et l'ensemble \(E\) lui-même, appartiennent à l'ensemble \(\mathcal{P}(E)\).
+\item Lorsque \(E=\varnothing\), l'ensemble \(\mathcal{P}(E)\) a un seul élément, à savoir la partie vide de \(E\) :
+  \[
+    \mathcal{P}(\varnothing)=\{\varnothing\}.
+  \]
+\end{enumerate}
+
+\section*{Complémentaire d'une partie d'un ensemble}
+
+Soient \(E\) un ensemble, et \(P\) une partie de \(E\). L'ensemble des éléments de \(E\) qui n'appartiennent pas à \(P\) s'appelle complémentaire de \(P\) dans \(E\), et se note \(\complement_E\)
+  
 
 \end{document}
