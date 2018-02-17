@@ -185,9 +185,9 @@ On emploie la notation \(E-P\), qui sera généralisée plus loin.
   \centering
   \begin{tikzpicture}
     \draw[pattern=dots] (0,0) circle [x radius=2cm, y radius=1.5cm, rotate=-20];
-    \node[fill=white] at (1,1.1) {E};
+    \node[circle,inner sep=1pt,fill=white] at (1,1.1) {E};
     \draw[fill=white] (0.5,-0.3) circle [x radius=1cm, y radius=0.7cm, rotate=10];
-    \node[fill=white] at (-0.2,0) {P};
+    \node[circle,inner sep=1pt,fill=white] at (-0.2,0) {P};
     \node at (-0.5,0.8) {\(\overline{P}\)};
   \end{tikzpicture}
   \caption{\label{fig:complementaire}Complémentaire d'une partie.}
@@ -213,12 +213,18 @@ Le passage aux complémentairee possède évidemment les propriétés suivantes 
     \[
       \complement_EE=\varnothing.
     \]
-  \item Si \(E={a,b,c,d}\) et \(P={a,c}\) :
+  \item Si \(E=\{a,b,c,d\}\) et \(P=\{a,c\}\) :
     \[
-      \complement_EP={b,d}.
+      \complement_EP=\{b,d\}.
     \]
     \item Le complémentaire dans l'ensemble \(\mathbb{N}\) des entiers naturels du sous-ensemble \(P\) des entiers impairs est l'ensemble des entiers pairs.
     \end{enumerate}
-    
+
+    \section*{Partitions}
+
+    Soient \(E\) un ensemble, et \(\mathcal{P}(E)\) l'ensemble des ses parties. On appelle \emph{partition} de \(E\) toute partie \(Q\) de \(\mathcal{P}(E)\) constituée de parties non vides de \(E\), telle que tout élément de \(E\) appartienne à un élément et un seul de \(Q\).
+
+    \paragraph{Exemple.}
+    Une partie de \(\mathcal{P}(E)\) constituée d'une partie \(P\) de \(E\), non vide et distincte de \(E\), et de la partie complémentaire \(\overline{P}\), est une partition de E. Ainsi, l'ensemble des nombres pairs et l'ensemble des nombres impairs constituent une partition de \(\mathbb{N}\).
   
 \end{document}
