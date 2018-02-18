@@ -221,6 +221,58 @@ Une partie de \(\mathcal{P}(E)\) constituée d'une partie \(P\) de \(E\), non vi
 
 \section{Opérations sur les ensembles}
 
+\subsection*{Intersection de deux ensembles}
+Soient \(E\) et \(F\) deu ensembles. On appelle intersection de \(E\) et de \(F\) l'ensemble, noté \(E\cap F\), constitué des éléments appartenant à la fois à \(E\) et à \(F\) (Fig. \ref{fig:intersection}). Le symbole \(\cap\) se lit «~inter~».
 
+\begin{figure}[ht]
+  \centering
+  \begin{tikzpicture}
+    \begin{scope}
+      \draw (1.5,0) circle [x radius=1cm,y radius=2cm, rotate=30];
+      \draw[clip] (0,0) circle [x radius=2cm,y radius=1cm];
+      \fill[pattern=dots] (1.5,0) circle [x radius=1cm,y radius=2cm,rotate=30];
+    \end{scope}
+    \node[circle,inner sep=1pt,fill=white] at (-1,0.9) {E};
+    \node[circle,inner sep=1pt,fill=white] at (1.9,1.1) {F};
+    \node[inner sep=3pt,fill=white] at (1.1,0.1) {\(E\cap F\)};
+  \end{tikzpicture}
+  \caption{\label{fig:intersection}Intersection de deux ensembles.}
+\end{figure}
+
+Lorsque l'intersection de \(E\) et de \(F\) est l'ensemble vide on dit que les ensembles \(E\) et \(F\) sont disjoints (Fig. \ref{fig:disjoints}).
+
+\begin{figure}[ht]
+  \centering
+  \begin{tikzpicture}
+    \draw (2,0) circle [x radius=1.2cm,y radius=1.8cm, rotate=30];
+    \draw (-1,0) circle [x radius=1.5cm,y radius=0.8cm, rotate=20];
+    \node[circle,inner sep=1pt,fill=white] at (-1,0.8) {E};
+    \node[circle,inner sep=1pt,fill=white] at (1.9,1.6) {F};
+  \end{tikzpicture}
+  \caption{\label{fig:disjoints}Ensembles disjoints.}
+\end{figure}
+
+\clearpage
+
+\paragraph{Exemples}
+\begin{enumerate}
+\item L'intersection de l'ensemble des entiers rationnels multiples de 2 et de l'ensemble des entiers rationnels multiples de 3 est l'ensemble des multiples de 6.
+\item L'intersection d'une partie \(P\) d'un ensemble \(E\) et de son complémentaire dans \(E\) est vide :
+  \[
+    P\cap\overline{P}=\varnothing
+  \]
+\item Plus généralement, deux parties d'un ensemble \(E\) appartenant à une même portion de \(E\) sont disjoints.
+\end{enumerate}
+
+Les propritétés suivantes sont immédiates :
+\begin{enumerate} [label=\alph*)]
+\item quel que soit l'ensemble \(E\),
+  \[E\cap E=E;\]
+\item quels que soient les ensembles \(E\) eet \(F\),
+  \[E\cap F=F\cap E;\]
+\item quels que soient les ensembles \(E\), \(F\) et \(G\),
+  \[(E\cap F)\cap G=E\cap(F\cap G).\]
+\end{enumerate}
+Les parenthèses étant désormais inutiles, nous noterons \(E\cap F\cap G\) la valeur commune des deux membres (Fig. \ref{fig:intersection3ensembles}).
     
 \end{document}
