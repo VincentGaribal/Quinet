@@ -41,7 +41,6 @@
 \chapter{Les ensembles}
 
 \section{Ensembles et relations.}
-
 Le langage des ensembles, introduit il y a plus d'un siècle par Georg
 \textsc{Cantor} (1845-1918), a envahi toutes les branches des mathématiques ; il
 est employé en France à tous les niveaux de l'enseignement, y compris
@@ -59,7 +58,6 @@ ensemble \(E\), qui est vérifiée ou non pour un ensemble donné \(E_0\)
 relation.
 
 \subsection*{Négation d'une relation}
-
 Étant donnée une relation \(R\), on définit en logique une nouvelle
 relation, appelée \emph{négation} de \(R\), et notée
 \((\text{non }R)\), ou encore \(\neg R\). La négation de la négation
@@ -82,11 +80,9 @@ relations
 sont contradictoires.
 
 \subsection*{Conjonction, disjonction}
-
 On appelle \emph{conjonction} de deux relations \(R_1\) et \(R_2\), et on note (\(R_1\) et \(R_2\)), ou \(R_1\wedge R_2\), la relation vraie si et seulement si \(R_1\) et \(R_2\) le sont. On définit enfin la \emph{disjonction} des relations \(R_1\) et \(R_2\) : c'est la relation, notée (\(R_1\) ou \(R_2\)), ou \(R_1\vee R_2\), vraie si et seulement si l'une au moins des deux relations \(R_1\) et \(R_2\) est vraie.
 
 \subsection*{Implication}
-
 À partir de ces trois définitions fondamentales, on introduit l'\emph{implication} : étant données deux relations \(R_1\) et \(R_2\), la relation (\(R_2\) ou (non \(R_1\)) se note \(R_1\Rightarrow R_2\), et se lit «~\(R_1\) implique \(R_2\)~». Si l'implication \(R_1\Rightarrow R_2\) est vraie, tout ensemble satisfaisant à \(R_1\) satisfait à \(R_2\).
 
 La relation d'implication conduit à la notion d'\emph{équivalence} de deux relations : on dit que les relations \(R_1\) et \(R_2\) sont équivalentes, et on note \(R_1\Leftrightarrow R_2\), si chacune d'elles implique l'autre.
@@ -106,7 +102,6 @@ Les deux relations sont donc \emph{équivalentes} :
 \[R_1\Leftrightarrow R_2.\]
 
 \section{Égalité. Appartenance.}
-
 Les relations d'égalité et d'appartenance sont encore des notions premières.
 
 L'\emph{égalité} de deux ensembles \(E\) et \(F\) se note \(E=F\) (et se lit «~\(E\) égale \(F\)~») ; elle signifie intuitivement que les lettres \(E\) et \(F\) représentent le même objet.
@@ -137,7 +132,6 @@ On représente généralement un ensemble par la partie du plan limitée par un 
 \end{figure}
 
 \section{Parties d'un ensemble.}
-
 Soient \(E\) et \(F\) deux ensembles. On dit que \(E\) est inclus (ou encore contenu) dans \(F\) si tout élément de \(E\) est élément de \(F\), ce qu'on note \(E\subset F\). On dit encore que \(E\) est une partie (ou un sous-ensemble) de \(F\) (Fig. \ref{fig:inclusion}).
 
 \begin{figure}[ht]
@@ -176,7 +170,6 @@ Les parties d'un ensemble \(E\) constituent un ensemble, appelé naturellement \
 \end{enumerate}
 
 \section*{Complémentaire d'une partie d'un ensemble}
-
 Soient \(E\) un ensemble, et \(P\) une partie de \(E\). L'ensemble des éléments de \(E\) qui n'appartiennent pas à \(P\) s'appelle complémentaire de \(P\) dans \(E\), et se note \(\complement_EP\), ou plus simplement \(\overline{P}\), lorsque aucune confusion n'est à craindre (Fig. \ref{fig:complementaire}).
 
 On emploie la notation \(E-P\), qui sera généralisée plus loin.
@@ -195,7 +188,7 @@ On emploie la notation \(E-P\), qui sera généralisée plus loin.
 
 Le passage aux complémentairee possède évidemment les propriétés suivantes :
 \begin{enumerate} [label=\alph*)]
-  \item Le complémentaire dans \(E\) du complémentaire \(\overline{P}\) d'une partie \(P\) de \(E\) n'est autre que la partie \(P\) elle-même :
+\item Le complémentaire dans \(E\) du complémentaire \(\overline{P}\) d'une partie \(P\) de \(E\) n'est autre que la partie \(P\) elle-même :
   \[
     \overline{P}=P
   \]
@@ -204,8 +197,8 @@ Le passage aux complémentairee possède évidemment les propriétés suivantes 
 \end{enumerate}
 
 \paragraph{Exemples.}
-  \begin{enumerate}
-  \item Le complémentaire dans \(E\) de la partie vide de \(E\) est égale à \(E\) tout entier :
+\begin{enumerate}
+\item Le complémentaire dans \(E\) de la partie vide de \(E\) est égale à \(E\) tout entier :
     \[
       \complement_E\varnothing=E.
     \]
@@ -213,18 +206,19 @@ Le passage aux complémentairee possède évidemment les propriétés suivantes 
     \[
       \complement_EE=\varnothing.
     \]
-  \item Si \(E=\{a,b,c,d\}\) et \(P=\{a,c\}\) :
+\item Si \(E=\{a,b,c,d\}\) et \(P=\{a,c\}\) :
     \[
       \complement_EP=\{b,d\}.
     \]
-    \item Le complémentaire dans l'ensemble \(\mathbb{N}\) des entiers naturels du sous-ensemble \(P\) des entiers impairs est l'ensemble des entiers pairs.
-    \end{enumerate}
+\item Le complémentaire dans l'ensemble \(\mathbb{N}\) des entiers naturels du sous-ensemble \(P\) des entiers impairs est l'ensemble des entiers pairs.
+\end{enumerate}
 
-    \section*{Partitions}
+\section*{Partitions}
+Soient \(E\) un ensemble, et \(\mathcal{P}(E)\) l'ensemble des ses parties. On appelle \emph{partition} de \(E\) toute partie \(Q\) de \(\mathcal{P}(E)\) constituée de parties non vides de \(E\), telle que tout élément de \(E\) appartienne à un élément et un seul de \(Q\).
 
-    Soient \(E\) un ensemble, et \(\mathcal{P}(E)\) l'ensemble des ses parties. On appelle \emph{partition} de \(E\) toute partie \(Q\) de \(\mathcal{P}(E)\) constituée de parties non vides de \(E\), telle que tout élément de \(E\) appartienne à un élément et un seul de \(Q\).
+\paragraph{Exemple.}
+Une partie de \(\mathcal{P}(E)\) constituée d'une partie \(P\) de \(E\), non vide et distincte de \(E\), et de la partie complémentaire \(\overline{P}\), est une partition de E. Ainsi, l'ensemble des nombres pairs et l'ensemble des nombres impairs constituent une partition de \(\mathbb{N}\).
 
-    \paragraph{Exemple.}
-    Une partie de \(\mathcal{P}(E)\) constituée d'une partie \(P\) de \(E\), non vide et distincte de \(E\), et de la partie complémentaire \(\overline{P}\), est une partition de E. Ainsi, l'ensemble des nombres pairs et l'ensemble des nombres impairs constituent une partition de \(\mathbb{N}\).
-  
+\section{Opérations sur les ensembles.}
+    
 \end{document}
