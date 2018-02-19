@@ -296,7 +296,71 @@ Les parenthèses étant désormais inutiles, nous noterons \(E\cap F\cap G\) la 
 
 \subsection*{Réunion de deux ensembles}
 
-Soient \(E\) et \(F\) deux ensembles. En appelle réunion de \(E\) et de \(F\) l'ensemble, noté \(E\cup F\), constitué des éléments appartenant à l'un au moins des ensembles \(E\) et \(F\) (Fig. \ref{fig:réunion}). Le symbole \(\cup\) se lit «~union~».
+Soient \(E\) et \(F\) deux ensembles. En appelle réunion de \(E\) et de \(F\) l'ensemble, noté \(E\cup F\), constitué des éléments appartenant à l'un au moins des ensembles \(E\) et \(F\) (Fig. \ref{fig:reunion}). Le symbole \(\cup\) se lit «~union~».
 
+\begin{figure}[ht]
+  \centering
+  \begin{tikzpicture}
+    \draw[pattern=dots] (0,0) circle [x radius=2cm,y radius=4cm,rotate=30];
+    \draw[pattern=dots] (2,0) circle [x radius=1cm,y radius=2cm,rotate=120];
+    \node[circle,inner sep=1pt,fill=white] at (-1.1,3.6) {E};
+    \node[circle,inner sep=1pt,fill=white] at (3,1.4) {F};
+  \end{tikzpicture}
+  \caption{\label{fig:reunion}Réunion de deux ensembles.}
+\end{figure}
+
+On pourrait dire plus brièvement que la réunion est l'ensemble des éléments appartenant à \(E\) ou à \(F\) ; mais le mote «~ou~» a deux acceptions :
+\begin{description}
+\item [OU inclusif,]signifiant qu'un élément appartenant à \(E\) ou a \(F\) peut appartenir à ces deux ensembles à la fois ;
+\item [OU exclusif,]signifiant qu'un élément appartenant à \(E\) ou à \(F\) appartient soit à \(E\), soit à \(F\), mais non à \(F\cap F\).
+\end{description}
+Le OU inclusif traduit la notion de réunion. Le OU exclusif conduit à la notion de différence symétrique (voir ci-dessous).
+
+\paragraph{exemples}
+\begin{enumerate}
+\item La réunion de l'ensemble des nombres entiers rationnels multiples de 4 et de l'ensemble des nombres entiers rationnels de la forme \(4p+2\), où \(p\) parcourt \(\mathbb{Z}\), est l'ensemble des nombres pairs.
+\item La réunion d'une partie \(P\) d'un ensemble \(E\) et de son complémentaire dans \(E\) est égale à \(E\) tout entier :
+  \[
+    P\cup\overline{P}=E.
+  \]
+\end{enumerate}
+Les propriétés suivantes sont immédiates :
+\begin{enumerate}[label=\alph*)]
+\item quel que soit l'ensemble \(E\),
+  \[E\cup E=E;\]
+\item quels que soient les ensembles \(E\) et \(F\),
+  \[E\cup F=F\cup E;\]
+\item quels que soient les ensembles \(E\), \(F\) et \(G\),
+  \[(E\cup F)\cup G=E\cup (F\cup G).\]
+\end{enumerate}
+Les parenthèses étant désormais inutiles, nous noterons \(E\cup F\cup G\) la valeur commune des deux membres (Fig. \ref{fig:reunion3ensembles}).
+
+\begin{figure}[ht]
+  \centering
+  \begin{tikzpicture}
+    \draw[pattern=dots] (0,0) circle [x radius=2cm,y radius=4cm];
+    \draw[pattern=dots] (0,0) circle [x radius=2cm,y radius=4cm,rotate=120];
+    \draw[pattern=dots] (0,0) circle [x radius=2cm,y radius=4cm,rotate=240];
+    \node[circle,inner sep=1pt,fill=white] at (0,4) {E};
+    \node[circle,inner sep=1pt,fill=white] at (-3.4,2) {G};
+    \node[circle,inner sep=1pt,fill=white] at (3.4,2) {F};
+    \node[inner sep=3pt,fill=white] at (0,0) {\(E\cup F\cup G\)};
+  \end{tikzpicture}
+  \caption{\label{fig:reunion3ensembles}Réunion de trois ensembles.}
+\end{figure}
+
+La réunion et l'intersection sont en quelque sorte compatibles avec l'inclusion ; plus précisément, soient \(E\), \(F\) et \(G\) trois ensembles. Si \(E\) est inclus dans \(F\), alors
+\begin{equation}
+  \label{eqn:intersectioninclusion}
+  (E\cap G)\subset(F\cap G)
+\end{equation}
+et
+\begin{equation}
+  (E\cup G)\subset(F\cup G).
+\end{equation}
+Établissons par exemple la relation \ref{eqn:intersectioninclusion}. Soit \(x\) un élément de \(E\cap G\), c'est à dire un élément commun à \(E\) et à \(G\). Comme \(E\) est contenu dans \(F\), \(x\) appartient à \(F\) et \(G\), ce qu'il fallait prouver.
+
+
+  
 
 \end{document}
