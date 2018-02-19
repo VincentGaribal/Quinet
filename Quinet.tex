@@ -274,5 +274,25 @@ Les propritétés suivantes sont immédiates :
   \[(E\cap F)\cap G=E\cap(F\cap G).\]
 \end{enumerate}
 Les parenthèses étant désormais inutiles, nous noterons \(E\cap F\cap G\) la valeur commune des deux membres (Fig. \ref{fig:intersection3ensembles}).
-    
+
+\begin{figure}[ht]
+  \centering
+  \begin{tikzpicture}
+    \draw (0,0) circle [x radius=2cm,y radius=4cm];
+    \draw (0,0) circle [x radius=2cm,y radius=4cm,rotate=120];
+    \draw (0,0) circle [x radius=2cm,y radius=4cm,rotate=240];
+    \begin{scope}
+      \clip (0,0) circle [x radius=2cm,y radius=4cm];
+      \clip (0,0) circle [x radius=2cm,y radius=4cm, rotate=120];
+      \fill[pattern=dots] (0,0) circle [x radius=2cm, y radius=4cm,rotate=240];
+    \end{scope}
+    \node[circle,inner sep=1pt,fill=white] at (0,4) {E};
+    \node[circle,inner sep=1pt,fill=white] at (-3.4,2) {G};
+    \node[circle,inner sep=1pt,fill=white] at (3.4,2) {F};
+    \node[inner sep=3pt,fill=white] at (0,0) {\(E\cap F\cap G\)};
+  \end{tikzpicture}
+  \caption{\label{fig:intersection3ensembles}Intersection de trois ensembles.}
+\end{figure}
+
+
 \end{document}
