@@ -360,7 +360,24 @@ et
 \end{equation}
 Établissons par exemple la relation \ref{eqn:intersectioninclusion}. Soit \(x\) un élément de \(E\cap G\), c'est à dire un élément commun à \(E\) et à \(G\). Comme \(E\) est contenu dans \(F\), \(x\) appartient à \(F\) et \(G\), ce qu'il fallait prouver.
 
+\subsection*{Relations entre intersection et réunion}
 
+Soient \(E\), \(F\) et \(G\) trois ensembles. Alors :
+\begin{equation}
+  \label{eqn:IntersectionReunion1}
+  E\cap(F\cup G)=(E\cap F)\cup(E\cap G)
+\end{equation}
+\begin{equation}
+  \label{eqn:IntersectionReunion2}
+  E\cup(F\cap G)=(E\cup F)\cap(E\cup G).
+\end{equation}
+Pour établir la relation \ref{eqn:IntersectionReunion1}, il suffit, conformément à la définition de l'égalité, de montrer que tout élément du premier membre est élément du second membre, et réciproquement.
+
+Soit d'abord \(x\) un élément appartenant à la fois à \(E\) et à \(F\cup G\) ; l'élément \(x\) appartient soit à \(F\), et donc à \(E\cap F\), soit à \(G\), et donc à \(E\cap G\). Il s'ensuit que \(x\) appartient à la réunion de \(E\cap F\) et de \(E\cap G\).
+
+Réciproquement, soit \(y\) un élément de \((E\cap F)\cup(E\cap G)\). Alors \(y\) appartient soit à \(E\cap F\), soit à \(E\cap G\). Donc \(y\) appartient à E, et à \(F\cup G\), ce qu'il fallait prouver (\ref{fig:DistributiviteIntersectionReunion}).
+
+La relation \ref{eqn:IntersectionReunion2} se démontre de la même manière (Fig. \ref{fig:DistributiviteReunionIntersection}).
   
 
 \end{document}
