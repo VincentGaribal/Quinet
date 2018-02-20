@@ -7,6 +7,7 @@
 \usepackage[math-style=french]{unicode-math}
 \setmathfont{TeX Gyre Pagella Math}
 \usepackage{tikz}
+\usepackage{imakeidx}
 \usepackage{enumitem}
 \usepackage[french]{babel}
 \usepackage{microtype}
@@ -26,6 +27,8 @@
 
 \title{Cours élémentaire de mathématiques supérieures}
 \author{Jean Quinet}
+
+\makeindex
 
 \begin{document}
 
@@ -48,9 +51,7 @@ est employé en France à tous les niveaux de l'enseignement, y compris
 parce qu'il est commode, mais aussi et surtout parce qu'il est est
 désormais impossible de l'ignorer.
 
-Les notions d'\emph{ensemble} et de \emph{relation} sont premières,
-c'est à dire qu'il n'est pas possible de les définir à partir d'autres
-notions.
+Les notions d'\emph{ensemble}\index{Ensemble} et de \emph{relation}\index{Relation} sont premières, c'est à dire qu'il n'est pas possible de les définir à partir d'autres notions.
 
 Intuitivement, une relation est une affirmation portant sur un
 ensemble \(E\), qui est vérifiée ou non pour un ensemble donné \(E_0\)
@@ -378,6 +379,9 @@ Soit d'abord \(x\) un élément appartenant à la fois à \(E\) et à \(F\cup G\
 Réciproquement, soit \(y\) un élément de \((E\cap F)\cup(E\cap G)\). Alors \(y\) appartient soit à \(E\cap F\), soit à \(E\cap G\). Donc \(y\) appartient à E, et à \(F\cup G\), ce qu'il fallait prouver (\ref{fig:DistributiviteIntersectionReunion}).
 
 La relation \ref{eqn:IntersectionReunion2} se démontre de la même manière (Fig. \ref{fig:DistributiviteReunionIntersection}).
-  
+
+\backmatter
+
+\printindex
 
 \end{document}
