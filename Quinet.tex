@@ -279,17 +279,17 @@ Les parenthèses étant désormais inutiles, nous noterons \(E\cap F\cap G\) la 
 \begin{figure}[ht]
   \centering
   \begin{tikzpicture}
-    \draw (0,0) circle [x radius=2cm,y radius=4cm];
-    \draw (0,0) circle [x radius=2cm,y radius=4cm,rotate=120];
-    \draw (0,0) circle [x radius=2cm,y radius=4cm,rotate=240];
+    \draw (0,2) circle [x radius=2cm,y radius=3cm];
+    \draw (-2,-1) circle [x radius=2cm,y radius=3cm,rotate=120];
+    \draw (2,-1) circle [x radius=2cm,y radius=3cm,rotate=240];
     \begin{scope}
-      \clip (0,0) circle [x radius=2cm,y radius=4cm];
-      \clip (0,0) circle [x radius=2cm,y radius=4cm, rotate=120];
-      \fill[pattern=dots] (0,0) circle [x radius=2cm, y radius=4cm,rotate=240];
+      \clip (0,2) circle [x radius=2cm,y radius=3cm];
+      \clip (-2,-1) circle [x radius=2cm,y radius=3cm, rotate=120];
+      \fill[pattern=dots] (2,-1) circle [x radius=2cm, y radius=3cm,rotate=240];
     \end{scope}
-    \node[circle,inner sep=1pt,fill=white] at (0,4) {E};
-    \node[circle,inner sep=1pt,fill=white] at (-3.4,2) {G};
-    \node[circle,inner sep=1pt,fill=white] at (3.4,2) {F};
+    \node[circle,inner sep=1pt,fill=white] at (0,5) {E};
+    \node[circle,inner sep=1pt,fill=white] at (-3.4,0.4) {G};
+    \node[circle,inner sep=1pt,fill=white] at (3.4,0.4) {F};
     \node[inner sep=3pt,fill=white] at (0,0) {\(E\cap F\cap G\)};
   \end{tikzpicture}
   \caption{\label{fig:intersection3ensembles}Intersection de trois ensembles.}
@@ -339,12 +339,12 @@ Les parenthèses étant désormais inutiles, nous noterons \(E\cup F\cup G\) la 
 \begin{figure}[ht]
   \centering
   \begin{tikzpicture}
-    \draw[pattern=dots] (0,0) circle [x radius=2cm,y radius=4cm];
-    \draw[pattern=dots] (0,0) circle [x radius=2cm,y radius=4cm,rotate=120];
-    \draw[pattern=dots] (0,0) circle [x radius=2cm,y radius=4cm,rotate=240];
-    \node[circle,inner sep=1pt,fill=white] at (0,4) {E};
-    \node[circle,inner sep=1pt,fill=white] at (-3.4,2) {G};
-    \node[circle,inner sep=1pt,fill=white] at (3.4,2) {F};
+    \draw[pattern=dots] (0,2) circle [x radius=2cm,y radius=3cm];
+    \draw[pattern=dots] (-2,-1) circle [x radius=2cm,y radius=3cm,rotate=120];
+    \draw[pattern=dots] (2,-1) circle [x radius=2cm,y radius=3cm,rotate=240];
+    \node[circle,inner sep=1pt,fill=white] at (0,5) {E};
+    \node[circle,inner sep=1pt,fill=white] at (-3.4,0.4) {G};
+    \node[circle,inner sep=1pt,fill=white] at (3.4,0.4) {F};
     \node[inner sep=3pt,fill=white] at (0,0) {\(E\cup F\cup G\)};
   \end{tikzpicture}
   \caption{\label{fig:reunion3ensembles}Réunion de trois ensembles.}
@@ -378,7 +378,45 @@ Soit d'abord \(x\) un élément appartenant à la fois à \(E\) et à \(F\cup G\
 
 Réciproquement, soit \(y\) un élément de \((E\cap F)\cup(E\cap G)\). Alors \(y\) appartient soit à \(E\cap F\), soit à \(E\cap G\). Donc \(y\) appartient à E, et à \(F\cup G\), ce qu'il fallait prouver (\ref{fig:DistributiviteIntersectionReunion}).
 
+\begin{figure}[ht]
+  \centering
+  \begin{tikzpicture}
+    \draw (0,2) circle [x radius=2cm,y radius=3cm];
+    \draw (-2,-1) circle [x radius=2cm,y radius=3cm,rotate=120];
+    \draw (2,-1) circle [x radius=2cm,y radius=3cm,rotate=240];
+    \begin{scope}
+      \clip (0,2) circle [x radius=2cm,y radius=3cm];
+      \clip (-2,-1) circle [x radius=2cm,y radius=3cm, rotate=120];
+      \fill[pattern=dots] (2,-1) circle [x radius=2cm, y radius=3cm,rotate=240];
+    \end{scope}
+    \node[circle,inner sep=1pt,fill=white] at (0,4) {E};
+    \node[circle,inner sep=1pt,fill=white] at (-3.4,2) {G};
+    \node[circle,inner sep=1pt,fill=white] at (3.4,2) {F};
+    \node[inner sep=3pt,fill=white] at (0,0) {\(E\cap F\cap G\)};
+  \end{tikzpicture}
+  \caption{\label{fig:DistributiviteIntersectionReunion}Distributivité de l'intersection par rapport à la réunion.}
+\end{figure}
+
 La relation \ref{eqn:IntersectionReunion2} se démontre de la même manière (Fig. \ref{fig:DistributiviteReunionIntersection}).
+
+\begin{figure}[ht]
+  \centering
+  \begin{tikzpicture}
+    \draw (0,2) circle [x radius=2cm,y radius=3cm];
+    \draw (-2,-1) circle [x radius=2cm,y radius=3cm,rotate=120];
+    \draw (2,-1) circle [x radius=2cm,y radius=3cm,rotate=240];
+    \begin{scope}
+      \clip (0,2) circle [x radius=2cm,y radius=3cm];
+      \clip (-2,-1) circle [x radius=2cm,y radius=3cm, rotate=120];
+      \fill[pattern=dots] (2,-1) circle [x radius=2cm, y radius=3cm,rotate=240];
+    \end{scope}
+    \node[circle,inner sep=1pt,fill=white] at (0,4) {E};
+    \node[circle,inner sep=1pt,fill=white] at (-3.4,2) {G};
+    \node[circle,inner sep=1pt,fill=white] at (3.4,2) {F};
+    \node[inner sep=3pt,fill=white] at (0,0) {\(E\cap F\cap G\)};
+  \end{tikzpicture}
+  \caption{\label{fig:DistributiviteReunionIntersection}Distributivité de la réunion par rapport à l'interrsection.}
+\end{figure}
 
 \backmatter
 
