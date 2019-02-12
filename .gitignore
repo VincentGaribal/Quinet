@@ -6,5 +6,6 @@
 *.idx
 *.ilg
 *.ind
+*.synctex.gz
 *.*~
 auto/
