@@ -345,7 +345,7 @@ Les parenthèses étant désormais inutiles, nous noterons \(E\cup F\cup G\) la 
     \node[circle,inner sep=1pt,fill=white] at (0,5) {E};
     \node[circle,inner sep=1pt,fill=white] at (-3.4,0.4) {G};
     \node[circle,inner sep=1pt,fill=white] at (3.4,0.4) {F};
-    \node[inner sep=3pt,fill=white] at (0,0) {\(E\cup F\cup G\)};
+    %\node[inner sep=3pt,fill=white] at (0,0) {\(E\cup F\cup G\)};
   \end{tikzpicture}
   \caption{\label{fig:reunion3ensembles}Réunion de trois ensembles.}
 \end{figure}
@@ -386,13 +386,14 @@ Réciproquement, soit \(y\) un élément de \((E\cap F)\cup(E\cap G)\). Alors \(
     \draw (2,-1) circle [x radius=2cm,y radius=3cm,rotate=240];
     \begin{scope}
       \clip (0,2) circle [x radius=2cm,y radius=3cm];
-      \clip (-2,-1) circle [x radius=2cm,y radius=3cm, rotate=120];
-      \fill[pattern=dots] (2,-1) circle [x radius=2cm, y radius=3cm,rotate=240];
+      %\clip (-2,-1) circle [x radius=2cm,y radius=3cm, rotate=120];
+      %\fill[pattern=dots] (2,-1) circle [x radius=2cm, y radius=3cm,rotate=240];
+      %\fill[pattern=dots] (2,-1) circle [x radius=2cm, y radius=3cm,rotate=240];
     \end{scope}
-    \node[circle,inner sep=1pt,fill=white] at (0,4) {E};
-    \node[circle,inner sep=1pt,fill=white] at (-3.4,2) {G};
-    \node[circle,inner sep=1pt,fill=white] at (3.4,2) {F};
-    \node[inner sep=3pt,fill=white] at (0,0) {\(E\cap F\cap G\)};
+    \node[circle,inner sep=1pt,fill=white] at (0,5) {E};
+    \node[circle,inner sep=1pt,fill=white] at (-3.4,0.4) {G};
+    \node[circle,inner sep=1pt,fill=white] at (3.4,0.4) {F};
+    %\node[inner sep=3pt,fill=white] at (0,0) {\(E\cap F\cap G\)};
   \end{tikzpicture}
   \caption{\label{fig:DistributiviteIntersectionReunion}Distributivité de l'intersection par rapport à la réunion.}
 \end{figure}
